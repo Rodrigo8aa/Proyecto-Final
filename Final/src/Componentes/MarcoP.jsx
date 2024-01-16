@@ -1,11 +1,15 @@
 import Button from "react-bootstrap/Button"
 import Card from 'react-bootstrap/Card';
 
-function MarcoP({ characters1 }) {
+function MarcoP({ argentina }) {
+  const imprimirinfo= () => {
+    {argentina.map((c)=>{
+        console.log(c.title);
+    })}
+    // console.log(argentina);
+}
 
-  const imprimirInfo1 = () => {
-    console.log(characters1);
-  }
+
   return (
 
 
@@ -23,11 +27,14 @@ function MarcoP({ characters1 }) {
         </Card.ImgOverlay>
       </Card>
 
-      <Button onClick={imprimirInfo1}>
-        Imprimir los datos de la Api
-      </Button>
+      {/* <Button onClick={imprimirinfo}>
+            Imprimir los datos de la info
+        </Button> */}
+
+
     </>
   );
 }
+
 
 export default MarcoP;

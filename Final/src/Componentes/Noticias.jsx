@@ -5,13 +5,12 @@ import { useEffect, useState } from "react";
 import "../Noticias.css"
 
 
-
 const Noticias =()=>{
 
     const [noticia, setNoticia] = useState([]);
 
     useEffect(()=>{
-        fetch('https://newsdata.io/api/1/news?apikey=pub_36488df9c011b9ab2feb9f5b0bab53d0839db&q=argentina ')
+        fetch('https://newsdata.io/api/1/news?apikey=pub_36488df9c011b9ab2feb9f5b0bab53d0839db&q=argentina')
         .then(Response => Response.json())
         .then(Response => setNoticia(Response.results))
         // .catch(()=>{console.log(Error);})
@@ -24,17 +23,18 @@ const Noticias =()=>{
 
     return(
         <>
-        <div className="noticias">
+        <div className="noticia">
             
-        <MarcoP />
+        <MarcoP argentina={noticia}/>
         <h1 className="text-center mt-5 mb-5">
                 Noticas Principales
             </h1>
+            
         <Button onClick={imprimirApi}>
             Imprimir los datos de la Api
         </Button>
 
-            <MarcoS />
+            <MarcoS argentina={noticia} />
         </div>
         </>
     )
