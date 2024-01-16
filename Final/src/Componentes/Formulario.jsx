@@ -11,7 +11,7 @@ const Formulario = () => {
     return (
         <>
 
-            <h1 class="text-center mt-5 mb-5">
+            <h1 className="text-center mt-5 mb-5">
                 Aportes del los Visitantes
             </h1>
 
@@ -64,7 +64,7 @@ const Formulario = () => {
 
 
 
-                    <div class="mb-3 text-center">
+                    <div className="mb-3 text-center">
                         <button onClick={imprimirDatos} type="button" className="btn btn-success w-50">Enviar</button>
                     </div>
                 </form>
