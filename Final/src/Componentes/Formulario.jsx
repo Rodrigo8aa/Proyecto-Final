@@ -1,29 +1,44 @@
-import react, { useState } from "react"
+import { useState } from 'react';
+
 
 const Formulario = () => {
     const[nombre,setNombre]= useState("");
-    const[gmail, setGmail]= useState('')
+    const[diahora, setDiahora]= useState('')
     const[cuentanos, setCuentanos]= useState('')
+    const[info, setInfo]= useState([]) 
 
-    const imprimirDatos=()=>{
-        console.log(`Datos ingresados en el formulario. ${nombre} - ${gmail} - ${cuentanos}`)
+    const imprimirInfo=()=>{
+        console.log(`Informacion ingresados en el formulario. ${nombre} - ${diahora} - ${cuentanos}`)
+
+        setInfo([...info, { nombre, diahora, cuentanos }])
+
+
+        setTimeout(() => {
+            window.localStorage.setItem('info', JSON.stringify(info));
+        }, 1000);
     }
+
+    function limpiarInfo() {
+        setNombre('');
+        setDiahora('');
+        setCuentanos('');
+    }
+
     return (
         <>
 
             <h1 className="text-center mt-5 mb-5">
-                Aportes del los Visitantes
+                Proporciona Datos o Informacion
             </h1>
 
 
             <div className="container">
                 <form id="formLogin">
                     <div className="mb-3">
-                        <label className="form-label">Nombre: </label>
+                        <label className="form-label">Nombre del desaparecido: </label>
                         <input 
                             type="text" 
                             className="form-control" 
-                            /* id="nombre" */ 
                             value = { nombre }
                             onChange={(e) => setNombre(e.target.value)}
                             required 
@@ -31,42 +46,34 @@ const Formulario = () => {
                         
                     </div>
                     <div className="mb-3">
-                        <label className="form-label">Gmail: </label>
+                        <label className="form-label">Dia y horario visto por última vez: </label>
                         <input 
                             type="text" 
                             className="form-control" 
-                            /* id="nombre" */ 
-                            value = { gmail }
-                            onChange={(e) => setGmail(e.target.value)}
+                            value = { diahora }
+                            onChange={(e) => setDiahora(e.target.value)}
                             required 
                         />
                         <div className="mb-3">
-                        <label  className="form-label">Cuentanos: </label>
+                        <label  className="form-label">Detalles y mas informacion: </label>
                         <textarea 
                             type="text" 
-                            className="form-control" 
-                            /* id="nombre" */ 
+                            className="form-control"  
                             value = { cuentanos }
                             onChange={(e) => setCuentanos(e.target.value)}
                             rows="3"
                             required 
                         />
+                        <div className="mb-3 text-center">
+                        <button onClick={ imprimirInfo } type="button" className="btn btn-success w-50">Cargar Informacion</button>
+                    </div>
+                    <div className="mb-3 text-center">
+                        <button onClick={ limpiarInfo } className="btn btn-danger w-75">Reset</button>
+                    </div>
                         
                     </div>
                     </div>
-                    {/* <div class="mb-3">
-                        <label for="exampleFormControlTextarea1" class="form-label">Cuentanos</label>
-                        <textarea 
-                        class="form-control" 
-                        id="exampleFormControlTextarea1" 
-                        rows="3"/>
-                    </div> */}
 
-
-
-                    <div className="mb-3 text-center">
-                        <button onClick={imprimirDatos} type="button" className="btn btn-success w-50">Enviar</button>
-                    </div>
                 </form>
             </div>
 

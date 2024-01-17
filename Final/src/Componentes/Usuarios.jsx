@@ -1,4 +1,4 @@
-
+import PropTypes from 'prop-types'
 const Usuarios= ({usuario}) => {
     return (
         <>
@@ -18,7 +18,13 @@ const Usuarios= ({usuario}) => {
                 })
 
             }
+            
         </>
+        
     )
+
 }
+
+Usuarios.propTypes = {
+    usuario: PropTypes.array.isRequired,}
 export default Usuarios;

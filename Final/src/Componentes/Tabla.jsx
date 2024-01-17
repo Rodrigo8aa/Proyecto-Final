@@ -1,4 +1,4 @@
-import {useEffect, useState} from "react";
+import { useEffect, useState } from "react";
 import Usuarios from "./Usuarios";
 
 const API = "https://jsonplaceholder.typicode.com/users";
@@ -24,17 +24,17 @@ const Tabla = () => {
         fetchUsers(API);
     }, [])
     return <>
-        <table>
-            <thead>
-            <tr>
-                <th>ID</th>
-                <th>Nombre</th>
-                <th>Gmail</th>
-                <th>Direccion</th>
-            </tr>
+        <table className="table">
+            <thead className="thead-dark">
+                <tr>
+                    <th scope="col">Id</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Gmail</th>
+                    <th scope="col">Direccion</th>
+                </tr>
             </thead>
             <tbody>
-            <Usuarios usuario={usuariosm}/>
+                <Usuarios usuario={usuariosm} />
             </tbody>
         </table>
     </>

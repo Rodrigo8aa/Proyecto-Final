@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import Cerrar from "./Cerrar";
 
 
 
@@ -7,7 +8,9 @@ function Barra() {
 
     return (
         <>
-    <nav className="navbar  navbar-expand-lg  bg-body-tertiary " >
+        <div className="barra"> 
+
+    <nav className="navbar  navbar-expand-lg  bg-body-tertiary-" >
                 <div className="container-fluid">
                     <Link to="/login" className="navbar-brand" >Login</Link>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -21,19 +24,25 @@ function Barra() {
                             <li className="nav-item">
                                 <Link to="/formulario" className="nav-link" href="#">Aportes</Link>
                             </li>
-                            <li className="nav-item">
-                                <Link to="/logueados" className="nav-link" href="#">Logueados</Link>
-                            </li>
+                            
                             <li className="nav-item">
                                 <Link to="/tabla" className="nav-link" href="#">Tabla</Link>
                             </li>
-
+                            <li className="nav-item">
+                                <Link to="/Messi" className="nav-link" href="#">Messi</Link>
+                            </li>
+                            <li className="nav-item">
+                                <Link to="/informacion" className="nav-link" href="#">informacion</Link>
+                            </li>
                         </ul>
+
+                        <Cerrar />
 
                         
                     </div>
                 </div>
             </nav>
+        </div>
         </>
     )
 }
