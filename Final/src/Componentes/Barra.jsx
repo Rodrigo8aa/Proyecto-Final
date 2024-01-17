@@ -7,7 +7,7 @@ function Barra() {
 
     return (
         <>
-    <nav className="navbar navbar-expand-lg bg-body-tertiary" >
+    <nav className="navbar  navbar-expand-lg  bg-body-tertiary " >
                 <div className="container-fluid">
                     <Link to="/login" className="navbar-brand" >Login</Link>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -16,13 +16,16 @@ function Barra() {
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                             <li className="nav-item">
-                                <Link to="/noticias" className="nav-link active" aria-current="page">Noticias</Link>
+                                <Link to="/desaparecidos" className="nav-link active" aria-current="page">Desaparecidos</Link>
                             </li>
                             <li className="nav-item">
                                 <Link to="/formulario" className="nav-link" href="#">Aportes</Link>
                             </li>
                             <li className="nav-item">
                                 <Link to="/logueados" className="nav-link" href="#">Logueados</Link>
+                            </li>
+                            <li className="nav-item">
+                                <Link to="/tabla" className="nav-link" href="#">Tabla</Link>
                             </li>
 
                         </ul>

@@ -1,6 +1,10 @@
 body{
-    background: rgb(94, 33, 33);  }
+    background: rgb(73, 121, 227);  }
 
 .noticia{
-    background: rgb(215, 88, 202);
+    background: rgb(42, 29, 29);
+}
+
+.nav{
+    background: red;
 }
