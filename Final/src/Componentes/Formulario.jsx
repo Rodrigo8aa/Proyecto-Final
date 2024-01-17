@@ -26,6 +26,8 @@ const Formulario = () => {
 
     return (
         <>
+        <div className='formulario'>
+
 
             <h1 className="text-center mt-5 mb-5">
                 Proporciona Datos o Informacion
@@ -46,14 +48,14 @@ const Formulario = () => {
                         
                     </div>
                     <div className="mb-3">
-                        <label className="form-label">Dia y horario visto por última vez: </label>
+                        <label className="form-label">Dia y horario, visto por última vez: </label>
                         <input 
                             type="text" 
                             className="form-control" 
                             value = { diahora }
                             onChange={(e) => setDiahora(e.target.value)}
                             required 
-                        />
+                            />
                         <div className="mb-3">
                         <label  className="form-label">Detalles y mas informacion: </label>
                         <textarea 
@@ -77,6 +79,7 @@ const Formulario = () => {
                 </form>
             </div>
 
+                            </div>
         </>
     )
 }

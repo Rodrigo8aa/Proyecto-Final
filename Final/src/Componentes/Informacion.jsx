@@ -11,13 +11,10 @@ function Informacion() {
 
     useEffect(() => {
 
-        //verificamos si existe una sessión en la app
         if(window.sessionStorage.getItem('usuario')){
 
-            //1. Setea o asigna la sesión del usuario
             setUsuario(usuario);
 
-            //2. Leer los usuarios desde el localstorage
             setInfo(JSON.parse(window.localStorage.getItem('info')));
 
             console.log(info);

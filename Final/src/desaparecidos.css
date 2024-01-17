@@ -2,7 +2,7 @@ body{
     background: rgb(214, 167, 167);  }
 
 .desaparecidos{
-    background: rgb(75, 38, 127);
+    background: rgb(177, 121, 255);
     border-radius:5cap;
 }
 
@@ -17,4 +17,9 @@ body{
 
 .barra{
     background: rgb(222, 199, 30);
+}
+
+.formulario{
+    background: rgb(177, 121, 255);
+
 }
